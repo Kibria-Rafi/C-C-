@@ -1,18 +1,24 @@
-#include<iostream>
-#include<string>
+#include <bits/stdc++.h> 
+using namespace std; 
+  
+int search(int arr[], int N, int x) 
+{ 
+    for (int i = 0; i < N; i++) 
+        if (arr[i] == x) 
+            return i; 
+    return -1; 
+} 
+  
 
-using namespace std;
-
-int main(){
-    int n;
-    int a[n];
-
-    cout << "How many number you want to Input in a array:\n";
-    cin >> n;
-
-    for( int i = 0 ; i < n ; i++){
-        cin >> a[i];
-    }
-
-
+int main(void) 
+{ 
+    int arr[] = { 2, 3, 4, 10, 40 }; 
+    int x = 10; 
+    int N = sizeof(arr) / sizeof(arr[0]); 
+  
+    int result = search(arr, N, x); 
+    (result == -1) 
+        ? cout << "Element is not present in array"
+        : cout << "Element is present at index " << result; 
+    return 0; 
 }
